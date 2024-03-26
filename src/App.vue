@@ -1,85 +1,122 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div class="container is-fluid px-0">
+    <nav class="navbar px-4 is-Zoox-Bg01" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://zooxsmart.com/">
+          <img src="http://canales.zooxsmart.com/uploads/1/2/7/0/127001545/published/logo-completa-branco.png?1634680474">
+        </a>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+        </div>
+
+        <div class="navbar-end">
+          <a class="navbar-item">
+            Home
+            <!--RouterLink to="/">Home</RouterLink-->
+          </a>
+
+          <a class="navbar-item">
+            Manual
+            <!--RouterLink to="/about">About</RouterLink-->
+          </a>
+
+          <a class="navbar-item">
+            Contacto
+            <!--RouterLink to="/about">About</RouterLink-->
+          </a>
+
+          <!--div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item is-selected">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div-->
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="columns m-0">
+      <div class="column">
+        <RouterView />
+      </div>
     </div>
-  </header>
 
-  <RouterView />
+    <footer class="footer is-Zoox-Bg01">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
+          The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
+          website content is licensed
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+          >CC BY NC SA 4.0</a
+          >.
+        </p>
+      </div>
+    </footer>
+  </div>
 </template>
-
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+a.navbar-item, a.navbar-link {
+  color: white !important;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.navbar-dropdown.navbar-item {
+  color: black !important;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.footer p, .footer strong {
+  color: white !important;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.is-Zoox-Bg01 {
+  background: url('http://canales.zooxsmart.com/uploads/1/2/7/0/127001545/background-images/468777109.jpg') no-repeat center center fixed !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  animation-name: fadeIn;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
 }
 </style>
