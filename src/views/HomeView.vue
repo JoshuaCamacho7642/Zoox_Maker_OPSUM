@@ -1,35 +1,7 @@
 <script setup>
-//import TheWelcome from '../components/TheWelcome.vue'
+import StandarHero from "@/elements/StandarHero.vue";
 </script>
 
 <template>
-  <div>
-    <span class="icon-text has-text-info">
-  <span class="icon">
-    <i class="fas fa-info-circle"></i>
-  </span>
-  <span>Info</span>
-</span>
-
-    <span class="icon-text has-text-success">
-  <span class="icon">
-    <i class="fas fa-check-square"></i>
-  </span>
-  <span>Success</span>
-</span>
-
-    <span class="icon-text has-text-warning">
-  <span class="icon">
-    <i class="fas fa-exclamation-triangle"></i>
-  </span>
-  <span>Warning</span>
-</span>
-
-    <span class="icon-text has-text-danger">
-  <span class="icon">
-    <i class="fas fa-ban"></i>
-  </span>
-  <span>Danger</span>
-</span>
-  </div>
+  <StandarHero/>
 </template>

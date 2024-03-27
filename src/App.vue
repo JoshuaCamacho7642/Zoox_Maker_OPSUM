@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div class="container is-fluid px-0">
-    <nav class="navbar px-4 is-Zoox-Bg01" role="navigation" aria-label="main navigation">
+    <nav class="navbar px-4 is-dark is-Zoox-Bg01" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://zooxsmart.com/">
           <img src="http://canales.zooxsmart.com/uploads/1/2/7/0/127001545/published/logo-completa-branco.png?1634680474">
@@ -25,18 +25,15 @@ import { RouterLink, RouterView } from 'vue-router'
 
         <div class="navbar-end">
           <a class="navbar-item">
-            Home
-            <!--RouterLink to="/">Home</RouterLink-->
+            <RouterLink class="is-color-white" to="/">Home</RouterLink>
           </a>
 
           <a class="navbar-item">
-            Manual
-            <!--RouterLink to="/about">About</RouterLink-->
+            <RouterLink class="is-color-white" to="/manual">Manual</RouterLink>
           </a>
 
           <a class="navbar-item">
-            Contacto
-            <!--RouterLink to="/about">About</RouterLink-->
+            <RouterLink class="is-color-white" to="/about">Contacto</RouterLink>
           </a>
 
           <!--div class="navbar-item has-dropdown is-hoverable">
@@ -63,11 +60,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary">
+              <!--a class="button is-light">
                 <strong>Sign up</strong>
-              </a>
-              <a class="button is-light">
-                Log in
+              </a-->
+              <a class="button">
+                <RouterLink class="is-color-black" to="/login">Log in</RouterLink>
               </a>
             </div>
           </div>
@@ -76,47 +73,17 @@ import { RouterLink, RouterView } from 'vue-router'
     </nav>
 
     <div class="columns m-0">
-      <div class="column">
+      <div class="column p-0">
         <RouterView />
       </div>
     </div>
 
-    <footer class="footer is-Zoox-Bg01">
+    <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
-          The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
-          website content is licensed
-          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-          >CC BY NC SA 4.0</a
-          >.
+          <strong>Powered by </strong><a href="https://zooxsmart.com/">Zoox Smart Data</a>.
         </p>
       </div>
     </footer>
   </div>
 </template>
-<style scoped>
-a.navbar-item, a.navbar-link {
-  color: white !important;
-}
-
-.navbar-dropdown.navbar-item {
-  color: black !important;
-}
-
-.footer p, .footer strong {
-  color: white !important;
-}
-
-.is-Zoox-Bg01 {
-  background: url('http://canales.zooxsmart.com/uploads/1/2/7/0/127001545/background-images/468777109.jpg') no-repeat center center fixed !important;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  animation-name: fadeIn;
-  animation-duration: 1000ms;
-  animation-fill-mode: both;
-}
-</style>

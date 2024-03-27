@@ -1,1 +1,12 @@
 @import 'bulma/css/bulma.css';
+
+.is-Zoox-Bg01 {
+    background: url('http://canales.zooxsmart.com/uploads/1/2/7/0/127001545/background-images/468777109.jpg') no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    animation-name: fadeIn;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+}
