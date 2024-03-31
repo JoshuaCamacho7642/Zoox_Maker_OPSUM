@@ -9,6 +9,8 @@
             </figure>
             <div class="field mt-6">
               <label class="label">Ingresa tus datos:</label>
+              {{mayuscula}}
+              {{userStore.minuscula}}
               <p class="control has-icons-left has-icons-right">
                 <input class="input" type="email" placeholder="Email"/>
                 <span class="icon is-small is-left">
@@ -34,14 +36,14 @@
             </div>
           </div>
         </div>
-        <!--footer class="card-footer">
-          <a href="#" class="card-footer-item">Continue</a>
-          <a href="#" class="card-footer-item">Register</a>
-        </footer-->
       </div>
     </div>
   </div>
 </template>
 <script setup>
-import {RouterView} from "vue-router";
+import { computed } from "vue";
+import { useUserStore } from "@/stores/user.js";
+
+const userStore = useUserStore();
+const mayuscula = computed(()=> userStore.userData.toUpperCase());
 </script>

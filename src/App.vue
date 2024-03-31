@@ -63,9 +63,7 @@ import { RouterLink, RouterView } from 'vue-router'
               <!--a class="button is-light">
                 <strong>Sign up</strong>
               </a-->
-              <a class="button">
-                <RouterLink class="is-color-black" to="/login">Log in</RouterLink>
-              </a>
+              <RouterLink class="button" to="/login">Log in</RouterLink>
             </div>
           </div>
         </div>
